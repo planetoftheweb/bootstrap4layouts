@@ -1,0 +1,15 @@
+header {
+  background: url(http://planetoftheweb.com/i/vancouver.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.site-navigation {
+  background: transparent;
+}
+
+.top-background {
+  height: 50vh;
+}
