@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,700|Source+Sans+Pro:200,300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bootsrap 4 Layouts</title>
+  </head>
+  <body data-spy="scroll" data-target=".site-nav" data-offset="80">
+<!-- ALL OF YOUR SITE CODE HERE -->
+
+
+<header class="site-header d-flex flex-column align-content-between">
+  <nav class="site-nav navbar navbar-expand-md navbar-dark family-sans fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-uppercase font-weight-light" href="#layout-home"><i class="fas fa-cube"></i> Bootstrap Layouts</a>
+      <div class="collapse navbar-collapse" id="myTogglerNav">
+        <div class="navbar-nav ml-auto font-weight-regular text-uppercase">
+          <a class="nav-item nav-link" href="#layout-hero">home</a>
+          <a class="nav-item nav-link" href="#layout-multicolumn">multi column</a>
+          <div class="dropdown">
+              <a class="nav-item nav-link dropdown-toggle" 
+                data-toggle="dropdown" id="iconsDropdown"
+                aria-haspopup="true" aria-expanded="false">media</a>
+              <div class="dropdown-menu" aria-labelledby="iconsDropdown">
+                <a class="dropdown-item" href="#layout-media-one">One</a>
+                <a class="dropdown-item" href="#layout-media-two">Two</a>
+                <a class="dropdown-item" href="#layout-media-three">Three</a>
+              </div>
+            </div>
+            <a class="nav-item nav-link" href="#layout-nested">nested</a>
+            <a class="nav-item nav-link" href="#layout-icons">icons</a>
+            <a class="nav-item nav-link" href="#layout-float">float</a>
+            <a class="nav-item nav-link" href="#layout-cards">cards</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="layout-hero" class="jumbotron jumbotron-fluid d-flex align-items-center">
+    <div class="container text-center text-white">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="display-4">Jumbotron</h1>
+          <p class="lead pt-2 font-weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi dolorem aliquam nemo iure et asperiores. Sed ullam vel
+            eius dolores, tempora animi reprehenderit?</p>
+        </div><!-- col -->
+      </div><!-- row -->
+    </div><!-- container -->
+  </section><!-- background -->
+</header>
+
+<article id="layout-multicolumn" class="section">
+  <header class="container text-center">
+      <h2 class="display-4 pt-4">Multi-column</h2>
+      <p class="lead mx-md-5 font-weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tenetur modi quasi ipsam, deleniti similique, quis autem reprehenderit
+  repudiandae ea alias hic aliquid dolor obcaecati harum unde quam enim veniam.</p>
+  </header>
+  <section class="container py-4">
+    <div class="row justify-content-center py-2">
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5> 
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+      <article class="text-center mb-5 col-10 col-md-6 col-lg-4 col-xl-3">
+        <img class="img-fluid rounded" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="sample image">
+        <h5 class="title text-center text-uppercase font-weight-bold mt-1">Text Heading</h5>
+      </article>
+    </div><!-- row -->
+  </section><!-- container -->  
+</article>
+
+<article id="layout-media" class="section">
+  <header class="container text-center">
+    <h2 class="display-4 pt-4">Media Classes</h2>
+    <p class="lead mx-md-5">Sequi quibusdam cupiditate vitae quae, fugiat explicabo. Fugit, nihil officia cum porro saepe architecto hic eius numquam dolorem odit aut similique, cupiditate veritatis? Recusandae odit corrupti debitis, nobis facilis temporibus.</p>
+  </header>
+  <section class="container my-5">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-8">
+        <section class="media mb-4" id="layout-media-one">
+          <img class="d-flex mr-3 img-fluid rounded" src="https://dummyimage.com/100/6.png&text=+" alt="Doctor Chase Photo">
+          <div class="media-body">
+            <h4 class="font-weight-normal">Media One</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum at voluptatibus incidunt, quia sapiente sequi quis quae atque quas id quam ab nobis iste eius, accusamus et officia laudantium! Ducimus.</p>
+          </div>
+        </section>
+        <section class="media mb-4" id="layout-media-two">
+          <img class="d-flex mr-3 img-fluid rounded" src="https://dummyimage.com/100/6.png&text=+" alt="Doctor Chase Photo">
+          <div class="media-body">
+            <h4 class="font-weight-normal">Media Two</h4>
+            <p>Possimus beatae magnam illum necessitatibus laudantium illo aspernatur ducimus eveniet? Voluptas labore similique aut quam quibusdam eius voluptatum dolores quas molestiae suscipit numquam veniam, nemo totam incidunt ullam pariatur perspiciatis.</p>
+          </div>
+        </section>
+        <section class="media mb-4" id="layout-media-three">
+          <img class="d-flex mr-3 img-fluid rounded" src="https://dummyimage.com/100/6.png&text=+" alt="Doctor Chase Photo">
+          <div class="media-body">
+            <h4 class="font-weight-normal">Media Three</h4>
+            <p>Quis at impedit repellat ipsam ad reiciendis beatae odio explicabo amet fuga nostrum animi nisi unde ab sint, sequi est officia. Maiores, fuga aliquid pariatur dignissimos eum vitae ex suscipit.</p>
+          </div>
+        </section>
+      </div><!-- col -->
+    </div><!-- row -->
+  </section> <!-- container -->
+</article>
+
+<article id="layout-nested" class="section text-white">
+    <div class="page" id="staff">
+        <div class="container-fluid">
+          <h2 id="ourstaff">Title</h2>
+          <div class="row align-items-center">
+    
+            <section class="col-lg-4">
+              <div class="row">
+                <div class="col-6 col-sm-3 col-md-2 col-lg-4">
+                  <img class="img-circle img-fluid rounded-circle" src="https://dummyimage.com/200/9.png&text=+" alt="Photo placeholder">
+                </div>
+                <div class="info col-xs-8 col-sm-7 col-md-6 col-lg-8">
+                  <h3>Title</h3>
+                  <p>Ab quidem quasi beatae accusamus dignissimos debitis vero consectetur aspernatur necessitatibus sint harum rem saepe, voluptatum asperiores, omnis illo tempore earum! Iste possimus laudantium, natus cum molestias dolores tempora illo.</p>
+                </div><!-- info -->
+              </div> <!-- inner row -->
+            </section> <!-- section -->
+    
+            <section class="col-lg-4">
+              <div class="row">
+                <div class="col-6 col-sm-3 col-md-2 col-lg-4">
+                  <img class="img-circle img-fluid rounded-circle" src="https://dummyimage.com/200/9.png&text=+"  alt="Photo placeholder">
+                </div>
+                <div class="info col-xs-8 col-sm-7 col-md-6 col-lg-8">
+                  <h3>Title</h3>
+                  <p>Fuga possimus aliquam repudiandae, aspernatur quam velit cupiditate nihil beatae eum ipsa consequuntur itaque doloremque! Consequatur consequuntur nesciunt perferendis in illum excepturi nisi, eius totam ducimus nemo. Libero, accusantium tempore?</p>
+                </div><!-- info -->
+              </div> <!-- inner row -->
+            </section> <!-- section -->
+    
+            <section class="col-lg-4">
+              <div class="row">
+                <div class="col-6 col-sm-3 col-md-2 col-lg-4">
+                  <img class="img-circle img-fluid rounded-circle" src="https://dummyimage.com/200/9.png&text=+" alt="Photo placeholder">
+                </div>
+                <div class="info col-xs-8 col-sm-7 col-md-6 col-lg-8">
+                  <h3>Dr Sanders</h3>
+                  <p>Eaque deleniti debitis suscipit maiores aliquid, officiis quisquam dignissimos, velit hic eos sint assumenda culpa neque corporis sequi repudiandae. Mollitia eaque reprehenderit labore dolores nam minima fugiat fugit explicabo perspiciatis?</p>
+                </div><!-- info -->
+              </div> <!-- inner row -->
+            </section> <!-- section -->
+    
+    
+          </div><!-- outer row -->
+        </div><!-- container -->
+      </div><!-- staff page -->
+</article>
+
+<article id="layout-icons" class="section">
+  <div class="container py-5">
+    <div class="row text-center">
+      <section class="col-md-4 my-3">
+        <div class="icon"><i class="fas fa-anchor"></i></div>
+        <h3>Icon One</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis doloremque possimus dignissimos illo praesentium
+          id consectetur tempora dolorum! Vel sapiente vitae, deserunt minima et rem accusamus?</p>
+      </section>
+      <section class="col-md-4 my-3">
+        <div class="icon"><i class="fas fa-bed"></i></div>
+        <h3>Icon Two</h3>
+        <p>Dolorem repudiandae ipsa fugit distinctio modi earum dicta eum tenetur, vel temporibus laudantium totam libero odit ex
+          labore commodi maiores molestias. Quo, hic maxime. Accusantium impedit dolorem cum error?</p>
+      </section>
+      <section class="col-md-4 my-3">
+        <div class="icon"><i class="fas fa-beer"></i></div>
+        <h3>Icon Three</h3>
+        <p>Et, alias asperiores? Repellat repudiandae, eum temporibus quibusdam iure, recusandae illo nesciunt, doloremque eligendi maiores tempora eos aliquid minus iusto ipsum facere. Minus, vitae autem dolores vero dolore?</p>
+      </section>
+    </div><!-- row -->
+  </div><!-- container --> 
+</article>
+
+<article id="layout-float" class="section">
+  <article class="container text-white">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="image-container position-sm-relative">
+          <img class="img-fluid position-sm-absolute" src="http://planetoftheweb.com/i/phone.svg">
+        </div>
+      </div>
+      <div class="col-md-4 ml-auto align-self-center">
+        <div class="section-description my-5">
+          <h3 class="display-4 font-weight-light">Floater Title</h3>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis fuga ex delectus sunt natus doloremque praesentium
+            aspernatur, totam tempora officia, sed fugit? Libero voluptatem nulla mollitia, amet dolor iste magni.</p>
+        </div>
+      </div>
+    </div><!-- row -->
+  </article>
+</article>
+
+<article id="layout-cards" class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-8 col-sm-12 col-lg-10">
+        <div class="card-deck">
+          <section class="card mb-5" id="drchase">
+            <img class="card-img-top img-fluid" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="Doctor Chase Photo">
+            <div class="card-body">
+              <h4 class="card-title">Card Title</h4>
+              <p class="card-text"></p>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolorem dolores consequatur ducimus nisi quos saepe error
+                quo praesentium, recusandae aliquam repudiandae.</p>
+            </div>
+          </section>
+
+          <section class="card mb-5" id="drchase">
+            <img class="card-img-top img-fluid" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="Doctor Chase Photo">
+            <div class="card-body">
+              <h4 class="card-title">Card Title</h4>
+              <p class="card-text">Impedit autem ea delectus repudiandae iste commodi a natus aspernatur culpa accusantium, hic, ullam molestiae ratione
+                perspiciatis sit?
+              </p>
+            </div>
+          </section>
+
+          <section class="card mb-5" id="drchase">
+            <img class="card-img-top img-fluid" src="https://dummyimage.com/16:9x400/6.png&text=+" alt="Doctor Chase Photo">
+            <div class="card-body">
+              <h4 class="card-title">Card Title</h4>
+              <p class="card-text">Magnam dolorem consectetur, soluta omnis quis eveniet dignissimos dolores mollitia sunt praesentium quo fugiat? Eius
+                ab in mollitia minus ad quisquam eum!</p>
+            </div>
+          </section>
+        </div><!-- card-group -->
+      </div><!-- col -->
+    </div><!-- row -->
+  </div> <!-- container -->
+</article>
+
+<!-- content container -->
+
+<footer class="footer">
+  <p>&copy; 2018 Ray Villalobos</p>
+  <a href="https://twitter.com/planetoftheweb"><i class="fab fa-twitter"></i></a>
+  <a href="https://facebook.com/viewsource"><i class="fab fa-facebook"></i></a>
+  <a href="https://linkedin.com/in/planetoftheweb"><i class="fab fa-linkedin"></i></a>
+  <a class="special" href="https://github.com/planetoftheweb"><i class="fab fa-github"></i></a>
+  <a href="https://plus.google.com/+RayVillalobos0"><i class="fab fa-google-plus"></i></a>
+  <a href="https://dribbble.com/planetoftheweb"><i class="fab fa-dribbble"></i></a>
+  <a href="https://www.flickr.com/photos/planetoftheweb/sets/72157602932636630/"><i class="fab fa-flickr"></i></a>
+  <a href="https://www.youtube.com/user/planetoftheweb"><i class="fab fa-youtube"></i></a>
+</footer>
+
+<!-- ALL OF YOUR SITE CODE HERE -->    
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- ADDITIONAL JS HERE -->
+  <script src="js/script.js"></script>
+  </body>
+</html>

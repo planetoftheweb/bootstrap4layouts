@@ -1,0 +1,137 @@
+/* Override Bootstrap Defaults */
+
+body {
+  font-family: Merriweather;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-family: "Source Sans Pro";
+}
+
+.family-sans {
+  font-family: "Source Sans Pro";
+}
+
+.family-serif {
+  font-family: "Merriweather";
+}
+
+.site-header {
+  background: linear-gradient(rgba(0, 0, 0, .50) 50px, transparent),
+  url(https://dummyimage.com/16:9x1600/2D8BCF.png&text=+);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site-header .site-nav {
+  transition: all .5s ease-out;
+  background: rgba(0,0,0,0);
+}
+.site-header .inbody {
+  background: rgba(164, 21, 34, .9);
+}
+
+.site-header .jumbotron {
+  min-height: 50vh;
+  background: transparent;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#layout-multicolumn {
+  background: #DDD;
+}
+
+#layout-multicolumn .title {
+  font-size: .9em;
+}
+
+#layout-nested {
+  background: linear-gradient(135deg, #888, #222);
+}
+
+#layout-nested .row {
+  min-height: 30vh;
+}
+
+#layout-icons .icon {
+  font-size: 3rem;
+  color: #666;
+}
+
+#layout-float {
+  margin: 150px 0 250px 0;
+  background: radial-gradient(ellipse at left, #585858 0, #232323 100%);
+}
+
+#layout-float .image-container {
+      margin-top: -140px;
+      height: 600px;
+    }
+
+#layout-float .image-container img {
+    transform: rotate(-15deg);
+    right: 0;
+    top: 0;
+    height: 700px;
+}
+
+@media screen and (max-width: 700px) {
+  #layout-float .image-container {
+    margin-top: 0;
+    height: 800px;
+  }
+
+  #layout-float {
+    margin: 0px 0 150px 0;
+  }
+
+  #layout-float .image-container img {
+    transform: rotate(0);
+    max-width: 300px;
+  }
+
+}
+
+#layout-cards .card {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .20);
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  background: #2D8BCF;
+  padding: 2rem 0;
+}
+
+.footer a {
+  color: white;
+  font-size: 2rem;
+  padding: .75rem;
+}
+
+.footer a:hover {
+  color: #FFB308;
+}
+
+.footer a:first-of-type:hover {
+  color: green;
+}
+
+.footer p::first-letter {
+  color: #8AC8E1;
+  font-size: 200%;
+}
