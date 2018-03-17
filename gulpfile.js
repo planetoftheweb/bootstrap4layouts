@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 webserver = require('gulp-webserver');
 
-var builds = 'app';
+var builds = 'docs';
 
 gulp.task('js', function() {
 return gulp.src(builds + '/js/myscript.js')
