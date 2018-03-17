@@ -118,21 +118,13 @@ h6,
 }
 
 .footer {
-  color: white;
-  text-align: center;
   background: #2D8BCF;
-  padding: 2rem 0;
 }
 
 .footer a {
-  color: white;
   font-size: 2rem;
-  padding: .75rem;
 }
 
-.footer a:hover {
-  color: #FFB308;
-}
 
 .footer a:first-of-type:hover {
   color: green;
