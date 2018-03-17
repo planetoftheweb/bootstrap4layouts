@@ -1,3 +1,11 @@
+/*
+--breakpoint-xs: 0;
+--breakpoint-sm: 576px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 992px;
+--breakpoint-xl: 1200px;
+*/
+
 /* Override Bootstrap Defaults */
 
 body {
@@ -27,7 +35,7 @@ h6,
 
 .site-header {
   background: linear-gradient(rgba(0, 0, 0, .50) 50px, transparent),
-  url(https://dummyimage.com/16:9x1600/2D8BCF.png&text=+);
+  url(https://dummyimage.com/16:9x1600/4.png&text=+);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,8 +45,9 @@ h6,
   transition: all .5s ease-out;
   background: rgba(0,0,0,0);
 }
+
 .site-header .inbody {
-  background: rgba(164, 21, 34, .9);
+  background: rgba(56, 56, 56, 0.9);
 }
 
 .site-header .jumbotron {
@@ -55,6 +64,14 @@ h6,
   background: #DDD;
 }
 
+#layout-multicolumn .photo-modal {
+  transition: all 300ms ease-in-out;
+}
+
+#layout-multicolumn .photo-modal:hover {
+  transform: scale(1.05) ;
+}
+
 #layout-multicolumn .title {
   font-size: .9em;
 }
@@ -63,9 +80,6 @@ h6,
   background: linear-gradient(135deg, #888, #222);
 }
 
-#layout-nested .row {
-  min-height: 30vh;
-}
 
 #layout-icons .icon {
   font-size: 3rem;
@@ -73,38 +87,31 @@ h6,
 }
 
 #layout-float {
-  margin: 150px 0 250px 0;
   background: radial-gradient(ellipse at left, #585858 0, #232323 100%);
 }
 
-#layout-float .image-container {
-      margin-top: -140px;
-      height: 600px;
-    }
 
-#layout-float .image-container img {
-    transform: rotate(-15deg);
-    right: 0;
-    top: 0;
-    height: 700px;
-}
-
-@media screen and (max-width: 700px) {
-  #layout-float .image-container {
-    margin-top: 0;
-    height: 800px;
-  }
-
+@media screen and (min-width: 992px) {
   #layout-float {
-    margin: 0px 0 150px 0;
+    margin: 50px 0 150px 0;
   }
 
-  #layout-float .image-container img {
-    transform: rotate(0);
-    max-width: 300px;
+  #layout-float .img-container {
+    position: relative;
   }
 
+  #layout-float .img-special {
+    position: absolute;
+  }
+  
+  #layout-float img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+  }  
 }
+
+
 
 #layout-cards .card {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .20);

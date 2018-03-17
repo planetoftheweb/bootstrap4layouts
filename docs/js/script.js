@@ -14,6 +14,12 @@ $(function() {
 
   });
 
+  $('#siteModal').on('show.bs.modal', function (event) {
+    $(this)
+      .find('.modal-content img')
+      .attr('src', $(event.relatedTarget).data('highres'));
+  });
+
   //Use smooth scrolling when clicking on navigation
   $('.navbar-nav a:not(.dropdown-toggle)').click(function() {
     if (location.pathname.replace(/^\//,'') === 
