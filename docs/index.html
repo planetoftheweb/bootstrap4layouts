@@ -13,17 +13,26 @@
 <!-- ALL OF YOUR SITE CODE HERE -->
 
 <header class="site-header">
-  <nav class="site-nav">
-      <a href="#layout-hero"><i class="fas fa-cube"></i> Layout Components</a>
-      <a href="#layout-hero">home</a>
-      <a href="#layout-multicolumn">columns</a>
-      <a href="#layout-media">media</a>
-      <a href="#layout-nested">nested</a>
-      <a href="#layout-icons">icons</a>
-      <a href="#layout-float">float</a>
-      <a href="#layout-cards">cards</a>
-  </nav>
-  <section id="layout-hero">
+    <nav class="site-nav navbar navbar-expand-md navbar-dark family-sans fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand text-uppercase font-weight-light" href="#layout-hero"><i class="fas fa-cube mr-2"></i> Layout Components</a>
+          <div class="collapse navbar-collapse" id="myTogglerNav">
+            <div class="navbar-nav ml-auto font-weight-regular text-uppercase">
+              <a class="nav-item nav-link" href="#layout-hero">home</a>
+              <a class="nav-item nav-link" href="#layout-multicolumn">columns</a>
+              <a class="nav-item nav-link" href="#layout-media">media</a>
+              <a class="nav-item nav-link" href="#layout-nested">nested</a>
+              <a class="nav-item nav-link" href="#layout-icons">icons</a>
+              <a class="nav-item nav-link" href="#layout-float">float</a>
+              <a class="nav-item nav-link" href="#layout-cards">cards</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+<section id="layout-hero">
     <h2>raybo.org/bootstrap4layouts</h2>
     <p>Learn to build practical Bootstrap 4 layouts using the grid, flex classes and utlity classes with these sample layout components. Each component is wrapped in an individual section class so you can copy, paste and customize them into your own layouts.</p>
     <a href="https://github.com/planetoftheweb/bootstrap4layouts">Github Repo</a>
