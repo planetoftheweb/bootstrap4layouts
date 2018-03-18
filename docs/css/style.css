@@ -8,22 +8,7 @@
 
 /* Override Bootstrap Defaults */
 
-body {
-  font-family: Merriweather;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.display-1,
-.display-2,
-.display-3,
-.display-4 {
-  font-family: "Source Sans Pro";
-}
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700|Source+Sans+Pro:200,300,600');
 
 .family-sans {
   font-family: "Source Sans Pro";
@@ -35,7 +20,7 @@ h6,
 
 .site-header {
   background: linear-gradient(rgba(0, 0, 0, .50) 50px, transparent),
-  url(https://dummyimage.com/16:9x1600/4.png&text=+);
+  url(https://dummyimage.com/16:9x400/6.png&text=+);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,12 +94,6 @@ h6,
     left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
   }  
-}
-
-
-
-#layout-cards .card {
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, .20);
 }
 
 .footer {
