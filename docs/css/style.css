@@ -18,6 +18,10 @@
   font-family: "Merriweather";
 }
 
+.font-weight-light {
+  font-weight: 100;
+}
+
 .site-header {
   background: linear-gradient(rgba(0, 0, 0, .50) 50px, transparent),
   url(https://dummyimage.com/16:9x400/6.png&text=+);
@@ -40,9 +44,9 @@
   background: transparent;
 }
 
-.section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.vertical-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #layout-multicolumn {
@@ -75,6 +79,48 @@
   background: radial-gradient(ellipse at left, #585858 0, #232323 100%);
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+#layout-carousel .fade .carousel-item {
+  background: linear-gradient(rgba(0, 0, 0, .50) 50px, transparent),
+  url(https://dummyimage.com/16:9x400/6.png&text=+);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeout 1s;
+}
+
+#layout-carousel .fade {
+  opacity: 1;
+}
+
+#layout-carousel .fade .carousel-item:first-child {
+  top: 0;
+  opacity: 0;
+  position: relative;
+}
+
+#layout-carousel .fade .carousel-item.active {
+  animation-delay: 0;
+  animation: fadein 1s;
+}
+
+#layout-carousel .fade .carousel-indicators {
+  opacity: 0;
+}
+
+#layout-carousel .fade .carousel-control-prev,
+#layout-carousel .fade .carousel-control-next {
+  opacity: 0;
+}
 
 @media screen and (min-width: 992px) {
   #layout-float {
@@ -88,12 +134,12 @@
   #layout-float .img-special {
     position: absolute;
   }
-  
+
   #layout-float img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
-  }  
+  }
 }
 
 .footer {
