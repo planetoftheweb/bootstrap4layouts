@@ -1,7 +1,7 @@
 $(function() {
   var scrolloffset = 55; //variable for menu height
 
-
+  // When Scrollspy Detects a change
   $(window).on('activate.bs.scrollspy', function () {
 
     var hash = $('.site-nav').find('a.active').attr('href');
@@ -12,8 +12,16 @@ $(function() {
       $('header nav').removeClass('inbody');
     }
 
+    // Animate Media Layout when it passes scroll
+    $('#layout-media .col-lg-8').css('visibility: hidden;');
+
+    if(hash === '#layout-media') {
+      $('#layout-media .col-lg-8').addClass('animated fadeInRight');
+    }
+
   });
 
+  // Modifies modal and injects high resolution image
   $('#siteModal').on('show.bs.modal', function (event) {
     $(this)
       .find('.modal-content img')
@@ -43,4 +51,6 @@ $(function() {
       } //target.length
     } //click function
   }); //smooth scrolling
-});
+
+
+}); // Make sure Document loaded

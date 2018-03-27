@@ -10,6 +10,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,700|Source+Sans+Pro:200,300,600');
 
+.animated { visibility: visible !important; }
+
 .family-sans {
   font-family: "Source Sans Pro";
 }
@@ -28,6 +30,15 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .site-header .navbar-collapse {
+    background-color: rgba(0,0,0,.5);
+    padding:10px;
+    transition: all .5s ease-out;
+  }
 }
 
 .site-header .site-nav {
@@ -44,6 +55,35 @@
   background: transparent;
 }
 
+.site-header .animated {
+  -webkit-animation-duration: 1s;
+}
+
+.site-header .nav-link {
+  position: relative;
+  padding-bottom: 0;
+  margin-bottom: 2px;
+}
+
+.site-header .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  max-width: 100px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #AAA;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.site-header .nav-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
 .vertical-padding {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -58,7 +98,7 @@
 }
 
 #layout-multicolumn .photo-modal:hover {
-  transform: scale(1.05) ;
+  transform: scale(1.1) translateY(-3px) ;
 }
 
 #layout-multicolumn .title {
@@ -80,13 +120,18 @@
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+#layout-carousel .fade {
+  opacity: 1;
+  position: relative;
 }
 
 #layout-carousel .fade .carousel-item {
@@ -98,19 +143,16 @@
   animation: fadeout 1s;
 }
 
-#layout-carousel .fade {
-  opacity: 1;
-}
-
 #layout-carousel .fade .carousel-item:first-child {
   top: 0;
-  opacity: 0;
+  opacity: 1;
   position: relative;
 }
 
 #layout-carousel .fade .carousel-item.active {
   animation-delay: 0;
   animation: fadein 1s;
+  opacity: 1;
 }
 
 #layout-carousel .fade .carousel-indicators {
