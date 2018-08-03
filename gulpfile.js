@@ -1,34 +1,42 @@
 var gulp = require('gulp'),
-webserver = require('gulp-webserver');
+  webserver = require('gulp-server-io'),
+  source = './docs',
+  dest = './docs';
 
-var builds = 'docs';
+function html() {
+  return gulp.src(dest + '**/*.html');
+}
 
-gulp.task('js', function() {
-return gulp.src(builds + '/js/myscript.js')
-});
+function js() {
+  return gulp.src(dest + '**/*.js');
+}
 
-gulp.task('html', function() {
-gulp.src(builds + '/**/*.html');
-});
+function styles() {
+  return gulp.src(dest + '**/*.css');
+}
 
-gulp.task('css', function() {
-gulp.src(builds + '/**/*.css');
-});
+function watch() {
+  gulp.watch(source + 'js/**/*.js', js);
+  gulp.watch(source + 'css/**/*.css', styles);
+  gulp.watch(source + 'index.html', html);
+}
 
-gulp.task('watch', function() {
-gulp.watch(builds + '/**/*.js', ['js']);
-gulp.watch(builds + '/**/*.css', ['css']);
-gulp.watch([builds + '/**/*.html'], ['html']);
-});
+function server() {
+  return gulp.src(source).pipe(
+    webserver({
+      serverReload: {
+        dir: source
+      },
+      port: 3333,
+      open: true
+    })
+  );
+}
 
-gulp.task('webserver', function() {
-gulp.src(builds + '/')
-    .pipe(webserver({
-        port: 3322,
-        livereload: true,
-        livereloadport: 8283,
-        open: true
-    }));
-});
+var build = gulp.series(
+  gulp.parallel(js, styles, html),
+  server,
+  watch
+);
 
-gulp.task('default', ['watch', 'html', 'js', 'css', 'webserver']);
+gulp.task('default', build);
