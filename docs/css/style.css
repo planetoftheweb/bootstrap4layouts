@@ -197,6 +197,7 @@ body {
 
 .site-header .animated {
   -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .site-header .nav-link {
@@ -242,9 +243,15 @@ body {
   background: var(--color-medium);
 }
 
+/* Layout Media */
+
+#page-media .layout-image {
+  max-width: 200px;
+}
+
 /* Layout Nested */
 
-.layout-nested {
+#page-nested {
   background: linear-gradient(
     135deg,
     var(--gray),
@@ -252,7 +259,7 @@ body {
   );
 }
 
-.layout-nested .layout-image {
+#page-nested .layout-image {
   width: 120px;
 }
 
