@@ -1,42 +1,40 @@
-var gulp = require('gulp'),
-  webserver = require('gulp-server-io'),
-  source = './docs',
-  dest = './docs';
+const {src, dest, series, parallel, watch} = require('gulp');
+const browserSync = require('browser-sync').create();
 
-function html() {
-  return gulp.src(dest + '**/*.html');
+const babel= require('gulp-babel');
+
+const origin = 'public';
+const destination = 'public';
+
+
+function html(cb) {
+  cb();
 }
 
-function js() {
-  return gulp.src(dest + '**/*.js');
+function css(cb) {
+  cb();
 }
 
-function styles() {
-  return gulp.src(dest + '**/*.css');
+function js(cb) {
+  cb();
 }
 
-function watch() {
-  gulp.watch(source + 'js/**/*.js', js);
-  gulp.watch(source + 'css/**/*.css', styles);
-  gulp.watch(source + 'index.html', html);
+function watcher(cb) {
+  watch(`${origin}/**/*.html`).on('change', series(html, browserSync.reload))
+  watch(`${origin}/**/*.scss`).on('change', series(css, browserSync.reload))
+  watch(`${origin}/**/*.js`).on('change', series(js, browserSync.reload))
+  cb();
 }
 
-function server() {
-  return gulp.src(source).pipe(
-    webserver({
-      serverReload: {
-        dir: source
-      },
-      port: 3333,
-      open: true
-    })
-  );
+function server(cb) {
+  browserSync.init({
+    notify: false,
+    open: true,
+    server: {
+      baseDir: destination
+    }   
+  })
+  cb();
 }
 
-var build = gulp.series(
-  gulp.parallel(js, styles, html),
-  server,
-  watch
-);
-
-gulp.task('default', build);
+exports.default = series(parallel(html, css, js), server, watcher);
