@@ -1,6 +1,12 @@
 /* Load fonts */
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
 
+//Import Animate.css custom animations
+@import '../../node_modules/animate.css/source/base';
+@import '../../node_modules/animate.css/source/fading_entrances/fadeInUp';
+@import '../../node_modules/animate.css/source/fading_entrances/fadeInRight';
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
 /* Variables */
 
 :root {
@@ -41,12 +47,9 @@
 
   --gray: #7d7d7d;
   --gray-dark: #404040;
-  --font-family-sans-serif: 'Source Sans Pro', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  --font-family-serif: 'Merriweather', 'Times New Roman',
-    serif;
+  --font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-serif: 'Merriweather', 'Times New Roman', serif;
 
   /* Page Variables */
 
@@ -159,11 +162,7 @@ body {
 /* Site Header */
 
 .site-header {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5) 50px,
-      transparent
-    ),
-    url(https://dummyimage.com/16:9x400/6.png&text=+);
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 50px, transparent), url(https://dummyimage.com/16:9x400/6.png&text=+);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,11 +251,7 @@ body {
 /* Layout Nested */
 
 #page-nested {
-  background: linear-gradient(
-    135deg,
-    var(--gray),
-    var(--gray-dark)
-  );
+  background: linear-gradient(135deg, var(--gray), var(--gray-dark));
 }
 
 #page-nested .layout-image {
@@ -281,11 +276,7 @@ body {
 /* Layout Float */
 
 #page-floater {
-  background: radial-gradient(
-    ellipse at left,
-    var(--gray) 0,
-    var(--gray-dark) 100%
-  );
+  background: radial-gradient(ellipse at left, var(--gray) 0, var(--gray-dark) 100%);
   padding: 8em 0;
 }
 
